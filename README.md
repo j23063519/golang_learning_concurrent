@@ -1,3 +1,3 @@
 # golang_learning_concurrent
 
-在這個範例中將會發現為何沒有印出 Hello，原因是因爲 main 已經執行完畢，且不會等待其他 goroutine，但是我們知道 goroutine 被阻塞時，就會把控制全轉交給其他 goroutine，所以我們可以用 time.Sleep() 來阻塞 main 這個 goroutine
+在這個範例中，可以使用”匿名函式(anonymous)“的goroutine，也了解到 channel 得基本使用。在這個範例中，使用的是 unbuffered channel，原本在上一個案例中，需要 time.Sleep 才能印出 log，這時使用 unbufferd channel，這樣 main 就會等到 channel 值被讀出來才會結束。
